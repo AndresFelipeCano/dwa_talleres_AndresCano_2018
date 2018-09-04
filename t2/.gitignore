@@ -1,0 +1,8 @@
+//Caché del compass
+.sass-cache/*
+
+//archivos de git
+.git/*
+
+//configuración de compass
+config/*
