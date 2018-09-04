@@ -1,5 +1,0 @@
-/* line 1, ../../sass/home/home.scss */
-.profile-name { line-height: 60px; left: -70px; position: absolute; font-family: 'Roboto'; color: #455a64; }
-
-/* line 9, ../../sass/home/home.scss */
-.profile-name:hover { text-decoration: underline; }
