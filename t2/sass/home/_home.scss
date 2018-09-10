@@ -1,0 +1,105 @@
+
+.navbar{
+  background-color: $navbar-color;
+  padding: 3em;
+  margin: 0;
+}
+
+.navbar-top{
+  justify-content: left;
+}
+
+.navbar-bottom{
+  padding: .1em;
+}
+
+.grid-container{
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  background-color: $background-light;
+}
+
+.grid-item{
+  padding: 2em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.image-container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+
+}
+
+.image-tittle{
+  display: inline-block;
+  margin: auto;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 10px;
+  text-align: center;
+  background-color: $background-light;
+
+}
+
+.image-content{
+  height: 100%;
+  margin: 0 auto;
+
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: 30% 8% 8% 8% 8%;
+  grid-gap: 2.5em;
+}
+
+.other-button{
+  border-radius: 10px;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: $white;
+  &:hover{
+    background-color: $grey;
+  }
+}
+
+.flame{
+  width: 2em;
+  height: 3em;
+}
+
+.main-pokemon{
+  width: 25rem;
+  height: 25rem;
+}
+
+.other-pokemon{
+
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.logo{
+  height: 3rem;
+}
+
+a{
+  text-decoration: none;
+}
+p{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+body{
+  background-color: $background-color;
+}

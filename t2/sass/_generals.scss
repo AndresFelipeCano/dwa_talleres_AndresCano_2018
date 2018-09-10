@@ -1,0 +1,44 @@
+body{
+  display: grid;
+  min-height: 97vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 1em;
+}
+
+footer{
+  grid-row: 4;
+  grid-column: span 12;
+}
+
+header{
+  grid-row-start: 1;
+  grid-column: span 12;
+}
+
+aside{
+  grid-row: 3;
+  grid-column: span 6;
+  padding: 0.5em;
+}
+
+main{
+  grid-row: 3;
+  grid-column: span 6;
+  border-radius: 10px;
+}
+
+.feature{
+  grid-column: span 4;
+}
+
+.block{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  display: grid;
+
+}
