@@ -1,0 +1,42 @@
+<h1 class="display-3 mb-1 text-center">
+  {{title}} - <span class="text-muted">{{ total }}</span>
+</h1>
+<form class="form-inline mt-4 fixed-top">
+  <div class="form-group mx-2">
+      <label for="filterInput">Search Filter</label>
+      <input type="text" class="form-control mx-2" id="filterInput" name="filter" [(ngModel)]="filter" (ngModelChange)="refreshList($event)" />
+  </div>
+</form>
+<div class="row pb-5">
+  <div class="col-6 d-flex justify-content-center py-5" *ngFor="let comic of comics; let i= index">
+    <div class="card text-center border border-black rounded col-4 px-3" *ngIf="comic.pageCount != 0 && comic.prices[0].price != 0">
+      <div class="card-header">
+        <a href="{{ comic.urls[0].url }}">
+            <img class="card-img-top img-fluid" src="{{comic.thumbnail.path}}.{{ comic .thumbnail.extension}}" alt="Card image cap">
+        </a>
+      </div>
+      <div class="card-block">
+        <div class="card-header">
+          <p class="h4">{{ comic.title}} - <span class="text-muted">${{ comic.prices[0].price }}</span></p>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            {{ comic.variantDescription}} <br/>
+            {{ comic.description }}
+          </p>
+          <button class="btn btn-primary mx-2" (onClick)="addLike()">Like</button>
+          <button class="btn btn-primary mx-2" (onClick)="subLike()">Dislike</button>
+          <input type="text" class="btn btn-outline-info" id="likesInput" name="likes" [(ngModel)]="likes" />
+        </div>
+        <div class="card-footer">
+            Publicado el: {{ comic.dates[1].date }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="text-center">
+  <blockquote class="blockquote">
+      <p class="mb-0" [innerHTML]="attribution"></p>
+  </blockquote>
+</footer>
