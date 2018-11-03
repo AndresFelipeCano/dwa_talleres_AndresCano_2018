@@ -9,7 +9,7 @@
 </form>
 <div class="row pb-5">
   <div class="col-6 d-flex justify-content-center py-5" *ngFor="let comic of comics; let i= index">
-    <div class="card text-center border border-black rounded col-4 px-3" *ngIf="comic.pageCount != 0 && comic.prices[0].price != 0">
+    <div class="card text-center border border-black rounded" *ngIf="comic.pageCount != 0 && comic.prices[0].price != 0">
       <div class="card-header">
         <a href="{{ comic.urls[0].url }}">
             <img class="card-img-top img-fluid" src="{{comic.thumbnail.path}}.{{ comic .thumbnail.extension}}" alt="Card image cap">
