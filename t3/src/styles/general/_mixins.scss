@@ -1,3 +1,4 @@
+/* Funcionalidad pata generar fuentes */
 @mixin newFont($fontFamily, $fileName){
     $path: 'assets/fonts/' + $fileName+ '/'+ $fileName;
     
@@ -16,5 +17,14 @@
 @include newFont('Hero','hero');
 @include newFont('Chakra','ChakraPetch-Light');
 
-
-
+@for $i from 1 through 70 {
+    .fontSize#{$i} { 
+      font-size: #{$i}px; 
+    }
+  }
+  
+  @for $i from 1 through 70 {
+    .lineHeight#{$i} { 
+        line-height: #{$i}px; 
+    }
+  }

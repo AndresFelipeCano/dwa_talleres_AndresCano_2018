@@ -1,4 +1,4 @@
-<section class="sectionCont">
+<!--section class="sectionCont">
     
     <div class="leftCont imageAgumon">
         <img class="imgDigimon" src="../../assets/img/agumon.png" alt="agumon">
@@ -18,5 +18,36 @@
         </div>
     </div>
 
+</section -->
+
+<section class="container py-3">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="card">
+                <div class="container mx-auto">
+                    <img class="img-fluid" src="../../assets/img/agumon.png" alt="agumon">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="card border border-black rounded-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-xs-12 py-5 mx-auto d-flex justify-content-center" *ngFor="let caract of feature_list; let i= index">
+                            <p class="h4 text-center d-inline">{{ caract }}</p>
+                            <button class="btn btn-danger d-inline m-2" (click)="eliminarCaract(i);"> x </button>               
+                        </div>
+                        <div class="col-12 py-3">
+                            <p class="h4 text-center">Add New Feature: </p>
+                            <div class="form-inline mx-5 d-flex justify-content-center">
+                                <input class="form-control d-inline mx-3" type="text" [(ngModel)]="feature_a_guardar">
+                                <button class="btn btn-primary d-inline" (click)="agregarCarac();"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
