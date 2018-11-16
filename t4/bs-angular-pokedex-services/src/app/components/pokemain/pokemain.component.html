@@ -1,0 +1,63 @@
+
+<div class="container" (click)="volverAtras();">
+  <!-- Interfaz móvil -->
+  <div class="row d-md-none text-center">
+    <div class="col-12  mt-3 text-center">
+      <div class="pokemon-tittle h2">
+        {{ pokemon.name }}
+      </div>
+    </div>
+    <div class="col-12 mt-3 text-center">
+      <img class="img-pokemon" src="{{ pokemon.image_url }}" width="203" alt="Pokemon {{ pokemon.name }} image">
+    </div>
+    <div class="col-12 text-center pokemon-tittle pokemon-descriptioin">
+      <p class="">
+        No. 00{{ pokemon.id }}
+      </p>
+      <p class="">
+        Nombre {{ pokemon.name }}
+      </p>
+      <p class="">
+        Altura {{ pokemon.height }}
+      </p>
+      <p class="">
+        Categoría {{ pokemon.category }}
+      </p>
+      <p class="">
+        Habilidad {{ pokemon.hability }}
+      </p>
+    </div>
+  </div>
+
+  <div class="row d-none d-md-block mt-3">
+    <div class="conainer">
+      <div class="row">
+        <div class="col-6 text-center">
+          <div class="pokemon-tittle h2">
+            {{ pokemon.name }}
+          </div>
+          <img class="img-pokemon" src="{{ pokemon.image_url }}" width="203" alt="Pokemon {{ pokemon.name }} image">
+        </div>
+        <div class="col-6 text-center pokemon-tittle">
+          <div class="text-center pokemon-tittle">
+            <p class="">
+                No. 00{{ pokemon.id }}
+            </p>
+            <p class="">
+              Nombre {{ pokemon.name }}
+            </p>
+            <p class="">
+              Altura {{ pokemon.height }}
+            </p>
+            <p class="">
+              Categoría {{ pokemon.category }}
+            </p>
+            <p class="">
+              Habilidad {{ pokemon.hability }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
